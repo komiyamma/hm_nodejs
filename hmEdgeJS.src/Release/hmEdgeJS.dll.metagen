@@ -50,10 +50,6 @@ Class hmEdgeJSDynamicLib+Hidemaru: AutoLayout, AnsiClass, Class, NestedPublic, S
     get_WindowHandle(): PrivateScope, Public, Static, HideBySig, SpecialName
     debuginfo(Object): PrivateScope, Public, Static, HideBySig
     get_version(): PrivateScope, Public, Static, HideBySig, SpecialName
-Class hmEdgeJSDynamicLib+HmOriginalEncodeMap: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Fields:
-    UInt32[] encode_map : Public, Static, InitOnly
 Class hmEdgeJSDynamicLib+Hidemaru+ErrorMsg: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
