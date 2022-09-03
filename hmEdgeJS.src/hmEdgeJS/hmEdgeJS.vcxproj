@@ -161,6 +161,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="hidemaruexe_export.cpp" />
     <ClCompile Include="hmEdgeJS.cpp" />
     <ClCompile Include="string_converter.cpp" />

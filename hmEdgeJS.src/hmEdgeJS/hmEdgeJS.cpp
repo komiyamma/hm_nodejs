@@ -15,6 +15,8 @@
 using namespace std;
 using namespace System;
 
+extern HMODULE hSelfDllModule;
+
 
 // 上の手動のBindDllHandleを自動で行う。秀丸8.66以上
 // １回だけ実行すれば良いわけではない。dllが読み込まれている間にもdll値が変わってしまうかもしれないため。(将来の実装では)
@@ -27,6 +29,23 @@ static bool BindDllHandle() {
 		return true;
 	}
 	return false;
+}
+
+bool isExpressionLoaded = false;
+static bool InitializeHandle() {
+	bool ret = BindDllHandle();
+	if (!isExpressionLoaded && hSelfDllModule) {
+		HRSRC res = FindResource(hSelfDllModule, TEXT("HMJSMODE"), TEXT("TEXT"));
+		if (res) {
+			char *expression = (char *)LoadResource(hSelfDllModule, res);
+			if (expression) {
+				String^ mng_expression = gcnew String(expression);
+				IEdgeJSStaticLib::SetJSModeExpression(mng_expression);
+				isExpressionLoaded = true;
+			}
+		}
+	}
+	return ret;
 }
 
 
@@ -55,7 +74,7 @@ MACRO_DLL const TCHAR * PopStrVar() {
 
 
 MACRO_DLL intHM_t DoFile(const TCHAR *szfilename) {
-	BindDllHandle();
+	InitializeHandle();
 
 	// ここはよく間違えるのでここだけチェック。他は秀丸8.66以降ではほとんど利用しないので無視
 	if (Hidemaru_GetDllFuncCalledType) {
@@ -74,6 +93,7 @@ MACRO_DLL intHM_t DoFile(const TCHAR *szfilename) {
 }
 
 MACRO_DLL intHM_t DestroyScope() {
+	isExpressionLoaded = false;
 	return (intHM_t)IEdgeJSStaticLib::DestroyScope();
 }
 

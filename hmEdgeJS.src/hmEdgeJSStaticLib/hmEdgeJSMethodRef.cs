@@ -695,6 +695,10 @@ public sealed partial class hmEdgeJSDynamicLib
 
                 global.hm = hm;
 
+                " + ";\n" + strJSModeExpression + ";\n" +
+
+
+                 @"
                 return function(data, callback) {
                     try {
                         // まず値全体を代入
@@ -724,6 +728,13 @@ public sealed partial class hmEdgeJSDynamicLib
                 }
 
             ");
+
+            // jsmode相当は読み込んだ
+            if (!isJSModeLoaded)
+            {
+                isJSModeLoaded = true;
+            }
+
 
             var ret = await func(new
             {

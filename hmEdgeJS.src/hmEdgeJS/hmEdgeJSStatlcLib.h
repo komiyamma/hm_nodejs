@@ -18,6 +18,8 @@ public:
 
 	static IntPtr BindDllHandle(IntPtr dll);
 
+	static void SetJSModeExpression(String^ str);
+
 	static IntPtr SetTmpVar(Object^ value);
 
 	static Object^ PopTmpVar();

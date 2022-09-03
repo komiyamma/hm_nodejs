@@ -31,6 +31,12 @@ public class IEdgeJSStaticLib
         return hmEdgeJSDynamicLib.BindDllHandle(dll);
     }
 
+    public static void SetJSModeExpression(String str)
+    {
+        hmEdgeJSDynamicLib.SetJSModeExpression(str);
+    }
+
+
     public static IntPtr SetTmpVar(Object value)
     {
         return hmEdgeJSDynamicLib.SetTmpVar(value);
@@ -110,6 +116,14 @@ public sealed partial class hmEdgeJSDynamicLib
         return dll;
     }
 
+    static bool isJSModeLoaded = false;
+    static string strJSModeExpression = "";
+    public static void SetJSModeExpression(String str)
+    {
+        strJSModeExpression = str;
+    }
+
+
     // dllのloaddllタイプによって、渡されたcmd(=expression)に対して、「dllの番号,」or「」を当てはめる処理
     public static String ModifyFuncCallByDllType(String cmd)
     {
@@ -169,6 +183,7 @@ public sealed partial class hmEdgeJSDynamicLib
     public static IntPtr DestroyScope()
     {
         iDllBindHandle = 0;
+        isJSModeLoaded = false;
         tmpVar = null;
 
         return (IntPtr)0;

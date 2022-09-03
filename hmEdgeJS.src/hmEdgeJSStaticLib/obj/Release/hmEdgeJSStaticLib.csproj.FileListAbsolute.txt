@@ -65,3 +65,13 @@ C:\新しいフォルダー (4)\hm_nodejs\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticL
 C:\新しいフォルダー (4)\hm_nodejs\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\EdgeJs.dll
 C:\新しいフォルダー (4)\hm_nodejs\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.csprojResolveAssemblyReference.cache
 C:\新しいフォルダー (4)\hm_nodejs\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.netmodule
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\double_edge.js
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\edge.js
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\x86\node.dll
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\x64\edge_nativeclr.node
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\x64\node.dll
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\edge\x86\edge_nativeclr.node
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\hmEdgeJSStaticLib.netmodule.config
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\hmEdgeJSStaticLib.netmodule
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\EdgeJs.dll
+C:\新しいフォルダー\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.netmodule
