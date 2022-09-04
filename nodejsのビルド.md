@@ -1,3 +1,17 @@
+・https://github.com/komiyamma/edge-js-up_48
+
+Powershellでedge-js/tools のディレクトリへ
+npm install --save follow-redirects みたいなのする。
+.\buildall.bat  でコンパイルされる。
+
+
+
+
+
+
+
+
+
 # node.js のビルド
 
 edgejs でサポートしているバージョンの node.js のソースをダウンロード
