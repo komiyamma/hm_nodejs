@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EdgeJs, Version=9.3.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EdgeJs.11.3.3\lib\net45\EdgeJs.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EdgeJS.cs" />
     <Compile Include="hmEdgeJSHidemaru.cs" />
     <Compile Include="hmEdgeJSHidemaruDelegate.cs" />
     <Compile Include="hmEdgeJSHidemaruEdit.cs" />

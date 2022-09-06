@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_6F96D96969904051BABD3C1A5DD29037"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7D3FD85C4CF347A0ADDDC6B65EBD4710"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,12 +59,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_6F663F97A6B74A249C1B84F37B820869"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6F96D96969904051BABD3C1A5DD29037"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -172,7 +160,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.0.1, Culture=neutral, processorArchitecture=x86"
+            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.0.2, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_6F663F97A6B74A249C1B84F37B820869"
@@ -182,37 +170,6 @@
                     }
                 }
             "SourcePath" = "8:..\\..\\hmEdgeJS.src\\Release\\hmEdgeJS.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_3086FB35A72E49C792E4A8C23A789992"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6F96D96969904051BABD3C1A5DD29037"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:EdgeJs, Version=9.3.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6F96D96969904051BABD3C1A5DD29037"
-                    {
-                    "Name" = "8:EdgeJs.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\hmEdgeJS.src\\hmEdgeJSStaticLib\\bin\\Release\\EdgeJs.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_3086FB35A72E49C792E4A8C23A789992"
@@ -359,7 +316,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_24B5B063607B449F828F1DDEDC7DEF89"
                     {
-                    "Name" = "8:edge"
+                    "Name" = "8:HmEdgeJS"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
