@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "hmEdgeJSSetup_x86", "hmEdgeJSSetup_x86\hmEdgeJSSetup_x86.vdproj", "{4DF7BBE4-6498-4A66-9CB9-041202F10995}"
 EndProject
