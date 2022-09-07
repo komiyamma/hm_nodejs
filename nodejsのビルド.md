@@ -10,26 +10,32 @@ npm install --save follow-redirects みたいなのする。
 
 
 
-
-
-
-# node.js のビルド
-
-edgejs でサポートしているバージョンの node.js のソースをダウンロード
-
+edgejs系のtoolsのdownload.csは
 ```
-vcbuild dll x86 openssl-no-asm
+using System;
+using System.Net;
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        if (args.Length != 2) {
+            throw new InvalidOperationException("Usage: download.exe <url> <file>");
+        }
+        ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+        Console.WriteLine("Downloading " + args[0] + " to " + args[1] + "...");
+        var client = new WebClient();
+        client.DownloadFile(args[0], args[1]);
+        Console.WriteLine("Done.");
+    }
+}
 ```
-
-でdllが出来あがる。x64は
-
+といったように、
 ```
-vcbuild dll x64 openssl-no-asm
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ```
+が必要になっているので注意。
+ 
 
+build_double.bat 9.8.0 などで対象のnodeのダウンロードとx86/x64両方のビルドが始まる。
 
-timeGetTime 系の参照エラーが出てるようなら、
-ビルド中に「libnode.vcxproj」が出来るので、「Ws2_32.lib」を探して、
-「winmm.lib」を付け足す。
-「リンク」の追加参照ライブラリとして「ws2_32.lib; winmm.lib」を追加する。
-プロジェクトに追加。
