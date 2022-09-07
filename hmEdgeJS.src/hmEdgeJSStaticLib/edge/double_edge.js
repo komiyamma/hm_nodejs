@@ -24,7 +24,7 @@ process.env['EDGE_NATIVE'] = process.env['EDGE_NATIVE'] ||
 var edge = require('./edge.js');
 
 
-var assemblyFile = __dirname + '\\..\\EdgeJs.dll';
+var assemblyFile = __dirname + '\\..\\HmEdgeJS.dll';
 const edgeSwitch = "-EdgeJs:";
 process.argv.forEach(e => {
     if(e.startsWith(edgeSwitch)) {
