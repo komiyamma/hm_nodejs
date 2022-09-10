@@ -12,8 +12,8 @@
  hidemaru.setVar = function (s, v) { return hm.Macro.Var(s, v); };
  hidemaru.evalMacro = function (s) { return hm.Macro.Eval(s); };
  hidemaru.isMacroExecuting = function() { return hm.Macro.IsExecuting; };
- hidemaru.getStaticVariable = function(s, n) { return hm.Macro.StaticVar.Get(s, n); };
- hidemaru.setStaticVariable = function(s, v, n) { return hm.Macro.StaticVar.Set(s, v, n); };
+ hidemaru.getStaticVariable = function(s, n) { return hm.Macro.GetStaticVariable(s, n); };
+ hidemaru.setStaticVariable = function(s, v, n) { return hm.Macro.SetStaticVariable(s, v, n); };
 
  var gtv = hidemaru.getVar;
  var evm = hidemaru.evalMacro;
