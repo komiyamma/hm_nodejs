@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="hmEdgeJSHGlobalToString.cs" />
     <Compile Include="EdgeJS.cs" />
     <Compile Include="hmEdgeJSHidemaru.cs" />
     <Compile Include="hmEdgeJSHidemaruDelegate.cs" />

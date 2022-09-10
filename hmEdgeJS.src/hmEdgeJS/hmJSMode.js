@@ -1,10 +1,19 @@
 (function () {
  var f = 1;
  hidemaru = {};
- hidemaru.loadTextFile = function (s) { try { var sr = hm.File.Open(target_filepath); var text = sr.Read(); sr.Close(); return text;	} catch(e) { } return undefined; }
+ hidemaru.getCurrentWindowHandle = function() { return hm.WindowHandle; };
+
+ hidemaru.getTotalTest = function() { return hm.Edit.TotalText; };
+ hidemaru.getLineText = function(l) { if (l===null) { l = hm.Edit.CursorPos.lineno; } var line = l-1; var text = hm.Edit.TotalText; var lines = text.match(/[^\r\n]*(\r\n|\r|\n|$)/g); if (0 <= line && line < lines.length) { return lines[line]; } else { return undefined; } };
+ hidemaru.getSelectedText = function() { var selected = hm.Edit.SelectedText; if (selected == "") { return undefined; } else { return selected; } };
+ hidemaru.loadTextFile = function (s) { try { var sr = hm.File.Open(target_filepath); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
+
  hidemaru.getVar = function (s) { return hm.Macro.Var(s); };
  hidemaru.setVar = function (s, v) { return hm.Macro.Var(s, v); };
  hidemaru.evalMacro = function (s) { return hm.Macro.Eval(s); };
+ hidemaru.isMacroExecuting = function() { return hm.Macro.IsExecuting; };
+ hidemaru.getStaticVariable = function(s, n) { return hm.Macro.StaticVar.Get(s, n); };
+ hidemaru.setStaticVariable = function(s, v, n) { return hm.Macro.StaticVar.Set(s, v, n); };
 
  var gtv = hidemaru.getVar;
  var evm = hidemaru.evalMacro;

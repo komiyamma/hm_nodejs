@@ -94,6 +94,60 @@ public sealed partial class hmEdgeJSDynamicLib
             [DllImport("user32.dll", SetLastError = true)]
             static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, IntPtr szTitle);
 
+            public static int SetStaticVariable(String symbolname, String value, int sharedMemoryFlag)
+            {
+                if (version < 915)
+                {
+                    OutputDebugStream(ErrorMsg.MethodNeed915);
+                    throw new MissingMethodException("HidemaruMacroSetGlobalVariableException");
+                }
+                try
+                {
+                    if (pSetStaticVariable != null)
+                    {
+                        return pSetStaticVariable(symbolname, value, sharedMemoryFlag);
+                    }
+                    else
+                    {
+                        OutputDebugStream(ErrorMsg.MethodNeed915);
+                        throw new MissingMethodException("HidemaruMacroSetGlobalVariableException");
+                    }
+                }
+                catch (Exception e)
+                {
+                    OutputDebugStream(e.Message);
+                    throw;
+                }
+            }
+
+            public static string GetStaticVariable(String symbolname, int sharedMemoryFlag)
+            {
+                if (version < 915)
+                {
+                    OutputDebugStream(ErrorMsg.MethodNeed915);
+                    throw new MissingMethodException("HidemaruMacroGetStaticVariableException");
+                }
+                try
+                {
+                    if (pGetStaticVariable != null)
+                    {
+                        IntPtr hGlobal = pGetStaticVariable(symbolname, sharedMemoryFlag);
+                        return HGlobalToString(hGlobal);
+
+                    }
+                    else
+                    {
+                        OutputDebugStream(ErrorMsg.MethodNeed915);
+                        throw new MissingMethodException("HidemaruMacroGetStaticVariableException");
+                    }
+                }
+                catch (Exception e)
+                {
+                    OutputDebugStream(e.Message);
+                    throw;
+                }
+            }
+
             public static bool IsExecuting
             {
                 get

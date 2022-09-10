@@ -26,6 +26,8 @@ public sealed partial class hmEdgeJSDynamicLib
     static Func<object, Task<object>> refMacroEval;
     static Func<object, Task<object>> refMacroGetVar;
     static Func<dynamic, Task<object>> refMacroSetVar;
+    static Func<dynamic, Task<object>> refMacroGetStaticVar;
+    static Func<dynamic, Task<object>> refMacroSetStaticVar;
     static Func<dynamic, Task<object>> refMacroFunction;
     static Func<dynamic, Task<object>> refMacroStatement;
 
@@ -139,6 +141,18 @@ public sealed partial class hmEdgeJSDynamicLib
         refMacroSetVar = (Func<dynamic, Task<object>>)(async (obj) =>
         {
             var ret = Hidemaru.Macro.SetVar((String)obj.VarName, obj.VarValue);
+            return ret;
+        });
+
+        refMacroGetStaticVar = (Func<dynamic, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.Macro.GetStaticVariable((String)obj.VarName, (int)obj.VarScope);
+            return ret;
+        });
+
+        refMacroSetStaticVar = (Func<dynamic, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.Macro.SetStaticVariable((String)obj.VarName, (String)obj.VarValue, (int)obj.VarScope);
             return ret;
         });
 
@@ -355,6 +369,18 @@ public sealed partial class hmEdgeJSDynamicLib
                     return ret;
                 }
 
+                function _hm_refMacroGetStaticVar(obj) {
+                    let ret = null;
+                    let dumm = _TransRefObj.refMacroGetStaticVar(obj, function(error, result) { ret = result; } );
+                    return ret;
+                }
+
+                function _hm_refMacroSetStaticVar(obj) {
+                    let ret = null;
+                    let dumm = _TransRefObj.refMacroSetStaticVar(obj, function(error, result) { ret = result; } );
+                    return ret;
+                }
+
                 function _hm_refMacroFunction(obj) {
                     let ret = null;
                     let dumm = _TransRefObj.refMacroFunction(obj, function(error, result) { ret = result; } );
@@ -547,16 +573,23 @@ public sealed partial class hmEdgeJSDynamicLib
                         return _hm_refMacroStatement( { FuncName:funcname, Args:args } );
                     }
 
-/*
-                    static Var(key, value) {
-                        if (value == null) {
-                            return _hm_refMacroGetVar(key);
-                        } else {
-                            _hm_refMacroSetVar( {key:prop, value:val} );
-                        }
+                    static GetStaticVariable(name, scope) {
+                        return _hm_refMacroGetStaticVar( { VarName:name, VarScope:scope } );
                     }
-*/
+
+                    static SetStaticVariable(name, value, scope) {
+                        return _hm_refMacroSetStaticVar( { VarName:name, VarValue:value, VarScope:scope } );
+                    }
                 }
+
+                _hm_macro_.StaticVar = {
+                    Get : function(name, scope) {
+                        return _hm_refMacroGetStaticVar( { VarName:name, VarScope:scope } );
+                    },
+                    Set : function(name, value, scope) {
+                        return _hm_refMacroSetStaticVar( { VarName:name, VarValue:value, VarScope:scope } );
+                    }
+                };
 
                 // hmJSやhmV8と同じ。
                 // hm.Macro.Var('key') と hm.Macro.Var['key']
@@ -603,6 +636,8 @@ public sealed partial class hmEdgeJSDynamicLib
                     }
                 }
                 );
+
+
 
                 class _hm_outputpane_ {
                     static Output(text) {
@@ -753,6 +788,8 @@ public sealed partial class hmEdgeJSDynamicLib
                 refMacroEval = refMacroEval,
                 refMacroGetVar = refMacroGetVar,
                 refMacroSetVar = refMacroSetVar,
+                refMacroGetStaticVar = refMacroGetStaticVar,
+                refMacroSetStaticVar = refMacroSetStaticVar,
                 refMacroFunction = refMacroFunction,
                 refMacroStatement = refMacroStatement,
                 refManualResetEvent = refManualResetEvent,
