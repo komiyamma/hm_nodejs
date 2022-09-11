@@ -1,0 +1,1 @@
+edge_nativecor.nodeがnode.exeを参照していたので、node.dllを参照するように変更した。
