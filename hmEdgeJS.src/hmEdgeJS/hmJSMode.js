@@ -22,7 +22,7 @@
  var hidemacJsGlobalStatements1s="var s=m+' ';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==0||typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}evm(s+';###=result;');var r=gtv('###');";
  var hidemacJsGlobalStatements1s2s="var s=m+' ';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==0||i==1||typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}evm(s+';###=result;');var r=gtv('###');";
  var hidemacJsGlobalStatementsAry="var s=m+' ';var ary=arguments[0];var c=0;if(arguments.length>1){c=arguments[1];}else{c=ary.length;}for(var i=0;i<c;i++){if(i>0)s+=',';var a=ary[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}evm(s+';###=result;');var r=gtv('###');";
- var hidemacJsGlobalFomulaNumber1s="var s='###='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==0||typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('###');";
+ var hidemacJsGlobalStatements1j="var s=m+' ';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='object'){a=JSON.stringify(a);}if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}evm(s+';###=result;');var r=gtv('###');"; var hidemacJsGlobalFomulaNumber1s="var s='###='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==0||typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('###');";
  var hidemacJsGlobalFomulaNumber1s2s="var s='###='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==0||i==1||typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('###');";
  var hidemacJsGlobalFomulaNumber3rn="var s='###='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==2){s+='###3';}else if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('###');";
  var hidemacJsGlobalFomulaNumber="var s='###='+m;"
@@ -41,6 +41,7 @@
  var st1s = hidemacJsGlobalStatements1s;
  var st1s2s = hidemacJsGlobalStatements1s2s;
  var stary = hidemacJsGlobalStatementsAry;
+ var st1j = hidemacJsGlobalStatements1j;
  var fn1s = hidemacJsGlobalFomulaNumber1s;
  var fn1s2s = hidemacJsGlobalFomulaNumber1s2s;
  var fn3rn = hidemacJsGlobalFomulaNumber3rn;
@@ -545,7 +546,7 @@
  hg.grepreplacedialog2 = function(){var m="grepreplacedialog2";eval(st);return r;};if(f)grepreplacedialog2=hg.grepreplacedialog2;
  hg.escapeinselect = function(){var m="escapeinselect";eval(st);return r;};if(f)escapeinselect=hg.escapeinselect;
  hg.hilightfound = function(){var m="hilightfound";eval(st);return r;};if(f)hilightfound=hg.hilightfound;
- hg.colormarker = function(){var m="colormarker";eval(st);return r;};if(f)colormarker=hg.colormarker;
+ hg.colormarker = function(){var m="colormarker";eval(st1j);return r;};if(f)colormarker=hg.colormarker;
  hg.nextcolormarker = function(){var m="nextcolormarker";eval(st);return r;};if(f)nextcolormarker=hg.nextcolormarker;
  hg.prevcolormarker = function(){var m="prevcolormarker";eval(st);return r;};if(f)prevcolormarker=hg.prevcolormarker;
  hg.colormarkerdialog = function(){var m="colormarkerdialog";eval(st);return r;};if(f)colormarkerdialog=hg.colormarkerdialog;

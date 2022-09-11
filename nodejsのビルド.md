@@ -6,6 +6,13 @@ npm install --save follow-redirects みたいなのする。
 .\buildall.bat  で多くのバージョンが一気にコンパイルされる。
 
 
+（C:\Users\admin\.nuget\packages）の.neget フォルダのedge-js には、
+11.15.0 のバイナリがあり、ia32とx64のedge_nativeclr.nodeとnode.dllがある。
+ところが、なんのミスか edge_nativeclr.node は node.dllではなく、node.exe を読み込もうとするため、
+ここで飛んでしまう。
+バイナリで編集して、node.dllと修正する。
+
+
 
 
 
