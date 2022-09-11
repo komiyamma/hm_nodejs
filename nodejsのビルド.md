@@ -13,6 +13,21 @@ npm install --save follow-redirects みたいなのする。
 バイナリで編集して、node.dllと修正する。
 
 
+#node.dllが build_douleで通らない時 (timeGetTimeのビルドエラー)
+node.gypの中身を編集する必要がある
+
+diff --git a/node.gyp b/node.gyp
+index 6dd9541cc5..302e9ba269 100644
+--- a/node.gyp
++++ b/node.gyp
+@@ -823,6 +823,7 @@
+             'Dbghelp',
+             'Psapi',
+             'Ws2_32',
++            'Winmm'
+           ],
+         }],
+         [ 'node_use_etw=="true"', {
 
 
 
