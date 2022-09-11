@@ -215,7 +215,7 @@
  hg.formline = function(){var m="formline";eval(fn);return r;};if(f)formline=hg.formline;
  hg.currentconfigset = function(){var m="currentconfigset";eval(fs);return r;};if(f)currentconfigset=hg.currentconfigset;
  hg.configstate = function(){var m="configstate";eval(fn);return r;};if(f)configstate=hg.configstate;
- hg.fontname=function(){var m="fontname";eval(fs);return r;};if(f)fontname=hg.fontname;
+ hg.fontname = function(){var m="fontname";eval(fs);return r;};if(f)fontname=hg.fontname;
  hg.fontsize = function(){var m="fontsize";eval(fn);return r;};if(f)fontsize=hg.fontsize;
 
  hg.refreshdatetime = function(){var m="refreshdatetime";eval(st);return r;};if(f)refreshdatetime=hg.refreshdatetime;
