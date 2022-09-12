@@ -25,6 +25,17 @@ static bool BindDllHandle() {
 	// 秀丸8.66以上
 	if (Hidemaru_GetDllFuncCalledType) {
 		int dll = Hidemaru_GetDllFuncCalledType(-1); // 自分のdllの呼ばれ方をチェック
+
+		// Hidemaru_GetDllFuncCalledTypeについては、別の存在でありながら成り立たせるために、呼ばれ方情報だけは結びつけています。
+		// 0x80000001みたいな、32bitの最上位ビットが立ったIDにしていて、マクロ側loaddllのIDと被らないようにしています。10進だとマイナス値でわかりにくいですね。
+		if ((dll & 0x80000000) != 0) {
+			wstring errmsg = L"「jsmode」の「hidemaru.loadDll(...)」からの呼び出しを検知しました。\n「jsmode」の「loadDll経由の呼び出し」には対応していません。\n"
+				L"「jsmode」から呼び出すには、「hidemaruCompat.loaddll(...)」を利用してください。\n"
+				L"https://秀丸マクロ.net/?page=nobu_tool_hm_jsmode_hidemarucompat\n";
+			MessageBox(NULL, errmsg.c_str(), L"「hmEdgeJS.dll」の「jsmode」からの呼び出し", NULL);
+			OutputDebugStringW(errmsg.c_str());
+		}
+
 		IEdgeJSStaticLib::BindDllHandle((IntPtr)dll);
 		return true;
 	}
