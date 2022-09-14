@@ -19,3 +19,4 @@ G:\repogitory\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\hmEdgeJSStati
 G:\repogitory\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\bin\Release\hmEdgeJSStaticLib.netmodule
 G:\repogitory\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.csproj.CoreCompileInputs.cache
 G:\repogitory\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.netmodule
+G:\repogitory\hm_nodejs\hmEdgeJS.src\hmEdgeJSStaticLib\obj\Release\hmEdgeJSStaticLib.csprojAssemblyReference.cache

@@ -3,8 +3,8 @@
  hidemaru = {};
  hidemaru.getCurrentWindowHandle = function() { return hm.WindowHandle; };
 
- hidemaru.getTotalTest = function() { return hm.Edit.TotalText; };
- hidemaru.getLineText = function(l) { if (l===null) { l = hm.Edit.CursorPos.lineno; } var line = l-1; var text = hm.Edit.TotalText; var lines = text.match(/[^\r\n]*(\r\n|\r|\n|$)/g); if (0 <= line && line < lines.length) { return lines[line]; } else { return undefined; } };
+ hidemaru.getTotalText = function() { return hm.Edit.TotalText; };
+ hidemaru.getLineText = function(l) { if (l==null) { l = hm.Edit.CursorPos.lineno; } var line = l-1; var text = hm.Edit.TotalText; var lines = text.match(/[^\r\n]*(\r\n|\r|\n|$)/g); if (0 <= line && line < lines.length) { return lines[line]; } else { return undefined; } };
  hidemaru.getSelectedText = function() { var selected = hm.Edit.SelectedText; if (selected == "") { return undefined; } else { return selected; } };
  hidemaru.loadTextFile = function (s) { try { var sr = hm.File.Open(target_filepath); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
 
@@ -28,6 +28,7 @@
  var hidemacJsGlobalFomulaNumber="var s='###='+m;"
  +"if(arguments.length>=1){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
  +"evm(s+';');var r=gtv('###');";
+ var hidemacJsGlobalFomulaString0="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
  var hidemacJsGlobalFomulaString2rn="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==1){s+='###2';}else if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
  var hidemacJsGlobalFomulaString="var s='$$$='+m;"
  +"if(arguments.length>=1){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
@@ -46,6 +47,7 @@
  var fn1s2s = hidemacJsGlobalFomulaNumber1s2s;
  var fn3rn = hidemacJsGlobalFomulaNumber3rn;
  var fn = hidemacJsGlobalFomulaNumber;
+ var fs0 = hidemacJsGlobalFomulaString0;
  var fs2rn = hidemacJsGlobalFomulaString2rn;
  var fs = hidemacJsGlobalFomulaString;
  var fsn = hidemacJsGlobalFomulaSorN;
@@ -179,6 +181,7 @@
  hg.updated = function(){var m="updated";eval(fn);return r;};if(f)updated=hg.updated;
  hg.updatecount = function(){var m="updatecount";eval(fn);return r;};if(f)updatecount=hg.updatecount;
  hg.anyclipboard = function(){var m="anyclipboard";eval(fn);return r;};if(f)anyclipboard=hg.anyclipboard;
+ hg.inputstates = function(){var m="inputstates";eval(fn);return r;};if(f)inputstates=hg.inputstates;
  hg.imestate = function(){var m="imestate";eval(fn);return r;};if(f)imestate=hg.imestate;
  hg.browsemode = function(){var m="browsemode";eval(fn);return r;};if(f)browsemode=hg.browsemode;
  hg.keypressed = function(){var m="keypressed";eval(fn);return r;};if(f)keypressed=hg.keypressed;
@@ -754,7 +757,9 @@
  hg.seteventnotify = function(){var m="seteventnotify";eval(st);return r;};if(f)seteventnotify=hg.seteventnotify;
  hg.geteventnotify = function(){var m="geteventnotify";eval(fn);return r;};if(f)geteventnotify=hg.geteventnotify;
 
-
+ hg.gettotaltext = function(){ var m="gettotaltext";eval(fs0);return r;};if(f)gettotaltext=hg.gettotaltext;
+ hg.getlinetext = function(){ var m="getlinetext";eval(fs0);return r;};if(f)getlinetext=hg.getlinetext;
+ hg.getselectedtext = function(){ var m="getselectedtext";eval(fs0);return r;};if(f)getselectedtext=hg.getselectedtext;
 
  hg.execmacro = function(){var m="execmacro"; eval(ns); return 0; };if(f)execmacro=hg.execmacro;
  hg.js = function(){var m="js"; eval(ns); return 0; };if(f)js=hg.js;
