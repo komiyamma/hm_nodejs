@@ -376,8 +376,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:hmEdgeJS x64 版"
-        "ProductCode" = "8:{5F4BF6BC-392A-4CD2-B743-FF9007850F40}"
-        "PackageCode" = "8:{D53999B4-93A4-4EC4-8D34-00CC56E68E5F}"
+        "ProductCode" = "8:{347AD4C3-328C-4073-BECA-ABAFB4C982CA}"
+        "PackageCode" = "8:{E148910E-4081-4785-A2A8-2D5B17175A69}"
         "UpgradeCode" = "8:{F2C86FB9-3FF7-44DE-9DE2-8B12595EE05C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
