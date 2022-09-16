@@ -80,15 +80,8 @@ public sealed partial class hmEdgeJSDynamicLib
                 // #ret=sendmessage(#h,0x111,1009,0);//1009=クリア 0x111=WM_COMMAND
                 //
                 IntPtr r = hmEdgeJSDynamicLib.SendMessage(OutputPane.WindowHandle, 0x111, commandID, IntPtr.Zero);
-                if ((long)r < (long)int.MinValue)
-                {
-                    r = (IntPtr)int.MinValue;
-                }
-                if ((long)r > (long)int.MaxValue)
-                {
-                    r = (IntPtr)int.MaxValue;
-                }
-                return (int)r;
+                int ret = (int)HmClamp<long>((long)r, Int32.MinValue, Int32.MaxValue);
+                return ret;
             }
 
             // Output枠へと出力する
