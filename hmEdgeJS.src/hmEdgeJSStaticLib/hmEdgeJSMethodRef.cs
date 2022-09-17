@@ -30,6 +30,7 @@ public sealed partial class hmEdgeJSDynamicLib
     static Func<dynamic, Task<object>> refMacroSetStaticVar;
     static Func<dynamic, Task<object>> refMacroFunction;
     static Func<dynamic, Task<object>> refMacroStatement;
+    static Func<dynamic, Task<object>> refMacroFlags;
 
     static Func<object, Task<object>> refFileGetHmEncode;
     static Func<object, Task<object>> refFileGetMsCodePage;
@@ -155,6 +156,13 @@ public sealed partial class hmEdgeJSDynamicLib
             var ret = Hidemaru.Macro.SetStaticVariable((String)obj.VarName, (String)obj.VarValue, (int)obj.VarScope);
             return ret;
         });
+
+        refMacroFlags = (Func<object, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.Macro.Flags;
+            return ret;
+        });
+
 
         refFileGetHmEncode = (Func<object, Task<object>>)(async (obj) =>
         {
@@ -393,6 +401,12 @@ public sealed partial class hmEdgeJSDynamicLib
                     return ret;
                 }
 
+                function _hm_refMacroFlags(obj) {
+                    let ret = null;
+                    let dumm = _TransRefObj.refMacroFlags(obj, function(error, result) { ret = result; } );
+                    return ret;
+                }
+
                 function _hm_refFileGetHmEncode(obj) {
                     let ret = 0;
                     let dumm = _TransRefObj.refFileGetHmEncode(obj, function(error, result) { ret = result; } );
@@ -557,7 +571,6 @@ public sealed partial class hmEdgeJSDynamicLib
                     static get MousePos() {
                         return _hm_refEditGetMousePos();
                     }
-
                 }
 
                 class _hm_macro_ {
@@ -641,6 +654,13 @@ public sealed partial class hmEdgeJSDynamicLib
 
                 class _hm_outputpane_ {
                     static Output(text) {
+                        if (typeof text == ""undefined"") { // typeofで判定する
+                            return ""undefined"";
+                        }
+                        if (typeof text == ""object"") {
+                            text = JSON.stringify(text, (key, value)=>{if (typeof value===""function"") {return ""[fn]:"" + value.toString();} return value;}, 2);
+                            text = text.replace(/\r\n/g, ""\n"").replace(/\n/g, ""\r\n"");
+                        }
                         return _hm_refOutputPane_Output(text.toString());
                     }
 
@@ -792,6 +812,7 @@ public sealed partial class hmEdgeJSDynamicLib
                 refMacroSetStaticVar = refMacroSetStaticVar,
                 refMacroFunction = refMacroFunction,
                 refMacroStatement = refMacroStatement,
+                refMacroFlags = refMacroFlags,
                 refManualResetEvent = refManualResetEvent,
                 refFileGetHmEncode = refFileGetHmEncode,
                 refFileGetMsCodePage = refFileGetMsCodePage,

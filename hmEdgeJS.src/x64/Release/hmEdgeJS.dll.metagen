@@ -104,6 +104,8 @@ Class hmEdgeJSDynamicLib+Hidemaru+File: AutoLayout, AnsiClass, Class, NestedPubl
     GetMsCodePage(Int32): PrivateScope, Public, Static, HideBySig
 Class hmEdgeJSDynamicLib+Hidemaru+Macro: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Object Flags : Public, Static
   Properties:
     Boolean IsExecuting 'get ' : 
   Methods:

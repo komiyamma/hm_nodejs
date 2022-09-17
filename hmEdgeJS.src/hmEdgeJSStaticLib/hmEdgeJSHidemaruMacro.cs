@@ -1064,6 +1064,8 @@ public sealed partial class hmEdgeJSDynamicLib
                 }
             }
 
+
+            public static Object Flags = new Object();
         }
     }
 }
