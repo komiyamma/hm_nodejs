@@ -88,6 +88,94 @@ declare namespace hm {
          * 関数の実行
          */
          let Function: any;
+
+         namespace Flags {
+            namespace Encode {
+                const Sjis: number;
+                const Utf16: number;
+                const Euc: number;
+                const Jis: number;
+                const Utf7: number;
+                const Utf8: number;
+                const Utf16_be: number;
+                const Euro: number;
+                const Gb2312: number;
+                const Big5: number;
+                const Euckr: number;
+                const Johab: number;
+                const Easteuro: number;
+                const Baltic: number;
+                const Greek: number;
+                const Russian: number;
+                const Symbol: number;
+                const Turkish: number;
+                const Hebrew: number;
+                const Arabic: number;
+                const Thai: number;
+                const Vietnamese: number;
+                const Mac: number;
+                const Oem: number;
+                const Default: number;
+                const Utf32: number;
+                const Utf32_be: number;
+                const Binary: number;
+                const LF: number;
+                const CR: number;
+
+                const Bom: number;
+                const NoBom: number;
+                const Selection: number;
+
+                const NoAddHist: number;
+                const WS: number;
+                const WB: number;
+            }
+
+            namespace SearchOption {
+                const Word: number;
+                const Casesense: number;
+                const NoCasesense: number;
+                const Regular: number;
+                const NoRegular: number;
+                const Fuzzy: number;
+                const Hilight: number;
+                const NoHilight: number;
+                const LinkNext: number;
+                const Loop: number;
+
+                const MaskComment: number;
+                const MaskIfdef: number;
+                const MaskNormal: number;
+                const MaskScript: number;
+                const MaskString: number;
+                const MaskTag: number;
+                const MaskOnly: number;
+                const FEnableMaskFlags: number;
+
+                const FEnableReplace: number;
+                const Ask: number;
+                const NoClose: number;
+
+                const SubDir: number;
+                const Icon: number;
+                const Filelist: number;
+                const FullPath: number;
+                const OutputSingle: number;
+                const OutputSameTab: number;
+
+                const BackUp: number;
+                const Preview: number;
+
+                const FEnableSearchOption2: number;
+            }
+            namespace SearchOption2 {
+                const UnMatch: number;
+                const InColorMarker: number;
+                const FGrepFormColumn: number;
+                const FGrepFormHitOnly: number;
+                const FGrepFormSortDate: number;
+            }
+        }
     }
  
     namespace Edit {
