@@ -614,6 +614,7 @@
  hg.clist = function(){var m="clist";eval(st);return r;};if(f)clist=hg.clist;
  hg.clearupdated = function(){var m="clearupdated";eval(st);return r;};if(f)clearupdated=hg.clearupdated;
  hg.refreshtabstop = function(){var m="refreshtabstop";eval(st);return r;};if(f)refreshtabstop=hg.refreshtabstop;
+ hg.refreshtabstop_pause = function(){var m="refreshtabstop_pause";eval(st);return r;};if(f)refreshtabstop_pause=hg.refreshtabstop_pause;
  hg.refreshtabstop_shrink = function(){var m="refreshtabstop_shrink";eval(st);return r;};if(f)refreshtabstop_shrink=hg.refreshtabstop_shrink;
  hg.refreshtabstop_current = function(){var m="refreshtabstop_current";eval(st);return r;};if(f)refreshtabstop_current=hg.refreshtabstop_current;
  hg.autospellcheckswitch = function(){var m="autospellcheckswitch";eval(st);return r;};if(f)autospellcheckswitch=hg.autospellcheckswitch;
@@ -659,6 +660,7 @@
  hg.enabledraw = function(){var m="enabledraw";eval(st);return r;};if(f)enabledraw=hg.enabledraw;
  hg.disabledraw2 = function(){var m="disabledraw2";eval(st);return r;};if(f)disabledraw2=hg.disabledraw2;
  hg.disablebreak = function(){var m="disablebreak";eval(st);return r;};if(f)disablebreak=hg.disablebreak;
+ hg.enablebreak = function(){var m="enablebreak";eval(st);return r;};if(f)enablebreak=hg.enablebreak;
  hg.disableinvert = function(){var m="disableinvert";eval(st);return r;};if(f)disableinvert=hg.disableinvert;
  hg.enableinvert = function(){var m="enableinvert";eval(st);return r;};if(f)enableinvert=hg.enableinvert;
  hg.disableerrormsg = function(){var m="disableerrormsg";eval(st);return r;};if(f)disableerrormsg=hg.disableerrormsg;
@@ -823,7 +825,6 @@
  hc.dllfuncw = function(){var m="dllfuncw";eval(fn);return r;}
  hc.dllfuncstr = function(){var m="dllfuncstr";eval(fs);return r;}
  hc.dllfuncstrw = function(){var m="dllfuncstrw";eval(fs);return r;}
- hc.loaddllfile = function(){var m="loaddllfile";eval(fs);return r;}
  hc.getloaddllfile = function(){var m="getloaddllfile";eval(fs);return r;}
  hc.setdlldetachfunc = function(){var m="setdlldetachfunc";eval(st);return r;}
  hc.dllfuncexist = function(){var m="dllfuncexist";eval(fn);return r;}
