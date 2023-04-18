@@ -23,6 +23,7 @@ public sealed partial class hmEdgeJSDynamicLib
     static Func<object, Task<object>> refEditGetCursorPos;
     static Func<object, Task<object>> refEditGetMousePos;
 
+    static Func<dynamic, Task<object>> refMacroSendMessage;
     static Func<object, Task<object>> refMacroEval;
     static Func<object, Task<object>> refMacroGetVar;
     static Func<dynamic, Task<object>> refMacroSetVar;
@@ -37,6 +38,7 @@ public sealed partial class hmEdgeJSDynamicLib
     static Func<object, Task<object>> refFileGetJsEncoding;
 
     static Func<dynamic, Task<object>> refFileReadAllText;
+    static Func<dynamic, Task<object>> refFileSaveTextFile;
 
     static Func<object, Task<object>> refOutputPane_Output;
     static Func<object, Task<object>> refOutputPane_Push;
@@ -121,6 +123,12 @@ public sealed partial class hmEdgeJSDynamicLib
             return ret;
         });
 
+        refMacroSendMessage = (Func<dynamic, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.Macro._SendMessage((int)obj.HWnd, (uint)obj.Msg, (int)obj.WParam, (int)obj.LParam);
+            return ret;
+        });
+
         refMacroFunction = (Func<dynamic, Task<object>>)(async (obj) =>
         {
             var ret = Hidemaru.Macro.Function((String)obj.FuncName, (Object[])(obj.Args));
@@ -163,7 +171,6 @@ public sealed partial class hmEdgeJSDynamicLib
             return ret;
         });
 
-
         refFileGetHmEncode = (Func<object, Task<object>>)(async (obj) =>
         {
             var ret = Hidemaru.File.GetHmEncode((String)obj);
@@ -185,6 +192,12 @@ public sealed partial class hmEdgeJSDynamicLib
         refFileReadAllText = (Func<dynamic, Task<object>>)(async (obj) =>
         {
             var ret = Hidemaru.File.ReadAllText((String)obj.FilePath, (int)obj.HmEncode);
+            return ret;
+        });
+
+        refFileSaveTextFile = (Func<dynamic, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.File._SaveTextFile((String)obj.FilePath, (string)obj.Text, (string)obj.Encoding);
             return ret;
         });
 
@@ -353,6 +366,7 @@ public sealed partial class hmEdgeJSDynamicLib
                     return ret;
                 }
 
+
                 function _hm_refMacroEval(expression) {
                     let ret = null;
                     let obj = null;
@@ -362,6 +376,12 @@ public sealed partial class hmEdgeJSDynamicLib
                         obj = expression;
                     }
                     let dumm = _TransRefObj.refMacroEval(obj, function(error, result) { ret = result; } );
+                    return ret;
+                }
+
+                function _hm_refMacroSendMessage(obj) {
+                    let ret = null;
+                    let dumm = _TransRefObj.refMacroSendMessage(obj, function(error, result) { ret = result; } );
                     return ret;
                 }
 
@@ -429,6 +449,12 @@ public sealed partial class hmEdgeJSDynamicLib
                     let text = """";
                     let dumm = _TransRefObj.refFileReadAllText(obj, function(error, result) { text = result; } );
                     return text;
+                }
+
+                function _hm_refFileSaveTextFile(obj) {
+                    let ret = 0;
+                    let dumm = _TransRefObj.refFileSaveTextFile(obj, function(error, result) { ret = result; } );
+                    return ret;
                 }
 
                 function _hm_refOutputPane_Output(obj) {
@@ -537,6 +563,10 @@ public sealed partial class hmEdgeJSDynamicLib
                         return { HmEncode: hm_encode, MsCodePage: codepage, JsEncodingName: name };
                     }
 
+                    static _SaveTextFile(filepath, text, encoding) {
+                        return _hm_refFileSaveTextFile({FilePath:filepath, Text:text, Encoding:encoding});
+                    }
+
                }
 
                 class _hm_edit_ {
@@ -592,6 +622,10 @@ public sealed partial class hmEdgeJSDynamicLib
 
                     static SetStaticVariable(name, value, scope) {
                         return _hm_refMacroSetStaticVar( { VarName:name, VarValue:value, VarScope:scope } );
+                    }
+
+                    static _SendMessage(hwnd, msg, wparam, lparam) {
+                        return _hm_refMacroSendMessage( { HWnd:hwnd, Msg:msg, WParam:wparam, LParam:lparam } );
                     }
                 }
 
@@ -805,6 +839,7 @@ public sealed partial class hmEdgeJSDynamicLib
                 refEditSetLineText = refEditSetLineText,
                 refEditGetCursorPos = refEditGetCursorPos,
                 refEditGetMousePos = refEditGetMousePos,
+                refMacroSendMessage = refMacroSendMessage,
                 refMacroEval = refMacroEval,
                 refMacroGetVar = refMacroGetVar,
                 refMacroSetVar = refMacroSetVar,
@@ -818,6 +853,7 @@ public sealed partial class hmEdgeJSDynamicLib
                 refFileGetMsCodePage = refFileGetMsCodePage,
                 refFileGetJsEncoding = refFileGetJsEncoding,
                 refFileReadAllText = refFileReadAllText,
+                refFileSaveTextFile = refFileSaveTextFile,
                 refOutputPane_Output = refOutputPane_Output,
                 refOutputPane_Push = refOutputPane_Push,
                 refOutputPane_Pop = refOutputPane_Pop,

@@ -6,7 +6,8 @@
  hidemaru.getTotalText = function() { return hm.Edit.TotalText; };
  hidemaru.getLineText = function(l) { if (l==null) { l = hm.Edit.CursorPos.lineno; } var line = l-1; var text = hm.Edit.TotalText; var lines = text.match(/[^\r\n]*(\r\n|\r|\n|$)/g); if (0 <= line && line < lines.length) { return lines[line]; } else { return undefined; } };
  hidemaru.getSelectedText = function() { var selected = hm.Edit.SelectedText; if (selected == "") { return undefined; } else { return selected; } };
- hidemaru.loadTextFile = function (s) { try { var sr = hm.File.Open(target_filepath); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
+ hidemaru.loadTextFile = function (p) { try { var sr = hm.File.Open(p); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
+ hidemaru.saveTextFile = function (p, t, e) { return hm.File._SaveTextFile(p, t, e); };
 
  hidemaru.getVar = function (s) { return hm.Macro.Var(s); };
  hidemaru.setVar = function (s, v) { return hm.Macro.Var(s, v); };
@@ -14,6 +15,10 @@
  hidemaru.isMacroExecuting = function() { return hm.Macro.IsExecuting; };
  hidemaru.getStaticVariable = function(s, n) { return hm.Macro.GetStaticVariable(s, n); };
  hidemaru.setStaticVariable = function(s, v, n) { return hm.Macro.SetStaticVariable(s, v, n); };
+
+ hidemaru.sendMessage = function(h, m, l, w) { return hm.Macro._SendMessage(h, m, l, w); };
+ hidemaru.getCursorPos = function() { var cpos = hm.Edit.CursorPos; return [cpos.lineno, cpos.column]; };
+ hidemaru.getCursorPosFromMousePos = function() { var cpos = hm.Edit.MousePos; return [cpos.lineno, cpos.column]; };
 
  var gtv = hidemaru.getVar;
  var evm = hidemaru.evalMacro;
@@ -736,7 +741,7 @@
  hg.setstaticvariable = function(){var m="setstaticvariable";eval(st);return r;};if(f)setstaticvariable=hg.setstaticvariable;
  hg.getstaticvariable = function(){var m="getstaticvariable";eval(fs);return r;};if(f)getstaticvariable=hg.getstaticvariable;
  hg.setregularcache = function(){var m="setregularcache";eval(st);return r;};if(f)setregularcache=hg.setregularcache;
-
+ hg.hidemaruversion = function(){var m="hidemaruversion";if(arguments.length>=1&&typeof(arguments[0])=="string"){eval(st);}else{eval(fs);}return r;};if(f)hidemaruversion=hg.hidemaruversion;	
  hg.hidemaruorder = function(){var m="hidemaruorder";eval(fn);return r;};if(f)hidemaruorder=hg.hidemaruorder;
  hg.hidemarucount = function(){var m="hidemarucount";eval(fn);return r;};if(f)hidemarucount=hg.hidemarucount;
  hg.findhidemaru = function(){var m="findhidemaru";eval(fn);return r;};if(f)findhidemaru=hg.findhidemaru;

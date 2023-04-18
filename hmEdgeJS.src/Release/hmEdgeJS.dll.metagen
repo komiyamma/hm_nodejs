@@ -97,6 +97,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+ExplorerPane: AutoLayout, AnsiClass, Class, Ne
 Class hmEdgeJSDynamicLib+Hidemaru+File: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
+    _SaveTextFile(String, String, String): PrivateScope, Public, Static, HideBySig
     ReadAllText(String, Int32(Optional, HasDefault)): PrivateScope, Public, Static, HideBySig
     GetEncoding(String): PrivateScope, Public, Static, HideBySig
     GetHmEncode(String): PrivateScope, Public, Static, HideBySig
@@ -109,6 +110,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+Macro: AutoLayout, AnsiClass, Class, NestedPub
   Properties:
     Boolean IsExecuting 'get ' : 
   Methods:
+    _SendMessage(Int32, UInt32, Int32, Int32): PrivateScope, Public, Static, HideBySig
     Eval(Object): PrivateScope, Public, Static, HideBySig
     SetStaticVariable(String, String, Int32): PrivateScope, Public, Static, HideBySig
     GetStaticVariable(String, Int32): PrivateScope, Public, Static, HideBySig
