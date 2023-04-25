@@ -54,7 +54,7 @@
  var fn3rn = hidemacJsGlobalFomulaNumber3rn;
  var fn = hidemacJsGlobalFomulaNumber;
  var fs0 = hidemacJsGlobalFomulaString0;
- var fsj0 = hidemacJsGlobalFomulaJson0;
+ var fs1j = hidemacJsGlobalFomulaJson0;
  var fs2rn = hidemacJsGlobalFomulaString2rn;
  var fs = hidemacJsGlobalFomulaString;
  var fsn = hidemacJsGlobalFomulaSorN;
@@ -601,14 +601,16 @@
  hg.iconthistab = function(){var m="iconthistab";eval(st);return r;};if(f)iconthistab=hg.iconthistab;
  hg.fullscreen = function(){var m="fullscreen";eval(st);return r;};if(f)fullscreen=hg.fullscreen;
 
+ hg.registercallback = function(){var m="registercallback";eval(fn);return r;};if(f)registercallback=hg.registercallback;
+
  hg.setbrowserpanetarget = function(){var m="setbrowserpanetarget";eval(st);return r;};if(f)setbrowserpanetarget=hg.setbrowserpanetarget;
  hg.setrenderpanetarget = function(){var m="setrenderpanetarget";eval(st);return r;};if(f)setrenderpanetarget=hg.setrenderpanetarget;
  hg.showbrowserpane = function(){var m="showbrowserpane";eval(st);return r;};if(f)showbrowserpane=hg.showbrowserpane;
  hg.refreshbrowserpane = function(){var m="refreshbrowserpane";eval(st);return r;};if(f)refreshbrowserpane=hg.refreshbrowserpane;
  hg.setbrowserpanesize = function(){var m="setbrowserpanesize";eval(st);return r;};if(f)setbrowserpanesize=hg.setbrowserpanesize;
  hg.setbrowserpaneurl = function(){var m="setbrowserpaneurl";eval(st);return r;};if(f)setbrowserpaneurl=hg.setbrowserpaneurl;
- hg.browserpanecommand = function(){var m="browserpanecommand";eval(fsj0);return r;};if(f)browserpanecommand=hg.browserpanecommand;
- hg.renderpanecommand = function(){var m="renderpanecommand";eval(fsj0);return r;};if(f)renderpanecommand=hg.renderpanecommand;
+ hg.browserpanecommand = function(){var m="browserpanecommand";eval(fs1j);return r;};if(f)browserpanecommand=hg.browserpanecommand;
+ hg.renderpanecommand = function(){var m="renderpanecommand";eval(fs1j);return r;};if(f)renderpanecommand=hg.renderpanecommand;
 
  hg.backtagjump = function(){var m="backtagjump";eval(st);return r;};if(f)backtagjump=hg.backtagjump;
  hg.directtagjump = function(){var m="directtagjump";eval(st);return r;};if(f)directtagjump=hg.directtagjump;
@@ -756,7 +758,11 @@
  hg.setstaticvariable = function(){var m="setstaticvariable";eval(st);return r;};if(f)setstaticvariable=hg.setstaticvariable;
  hg.getstaticvariable = function(){var m="getstaticvariable";eval(fs);return r;};if(f)getstaticvariable=hg.getstaticvariable;
  hg.setregularcache = function(){var m="setregularcache";eval(st);return r;};if(f)setregularcache=hg.setregularcache;
- hg.hidemaruversion = function(){var m="hidemaruversion";if(arguments.length>=1&&typeof(arguments[0])=="string"){eval(st);}else{eval(fs);}return r;};if(f)hidemaruversion=hg.hidemaruversion;	
+ hg.hidemaruversion = function(){var m="hidemaruversion";if(arguments.length>=1&&typeof(arguments[0])=="string"){eval(st);}else{eval(fs);}return r;};if(f)hidemaruversion=hg.hidemaruversion;
+
+ hg.keyhook = function(){var m="keyhook";eval(fn);return r;};if(f)keyhook=hg.keyhook;
+ hg.clearkeyhook = function(){var m="clearkeyhook";eval(st);return r;};if(f)clearkeyhook=hg.clearkeyhook;
+
  hg.hidemaruorder = function(){var m="hidemaruorder";eval(fn);return r;};if(f)hidemaruorder=hg.hidemaruorder;
  hg.hidemarucount = function(){var m="hidemarucount";eval(fn);return r;};if(f)hidemarucount=hg.hidemarucount;
  hg.findhidemaru = function(){var m="findhidemaru";eval(fn);return r;};if(f)findhidemaru=hg.findhidemaru;
@@ -782,6 +788,9 @@
  hg.gettotaltext = function(){ var m="gettotaltext";eval(fs0);return r;};if(f)gettotaltext=hg.gettotaltext;
  hg.getlinetext = function(){ var m="getlinetext";eval(fs0);return r;};if(f)getlinetext=hg.getlinetext;
  hg.getselectedtext = function(){ var m="getselectedtext";eval(fs0);return r;};if(f)getselectedtext=hg.getselectedtext;
+
+ hg.setselectionrange = function(){var m="setselectionrange";eval(st1j);return r;};if(f)setselectionrange=hg.setselectionrange;
+ hg.getselectedrange = function(){var m="getselectedrange";eval(fs1j);return JSON.parse(r);};if(f)getselectedrange=hg.getselectedrange;
 
  hg.execmacro = function(){var m="execmacro"; eval(ns); return 0; };if(f)execmacro=hg.execmacro;
  hg.js = function(){var m="js"; eval(ns); return 0; };if(f)js=hg.js;
