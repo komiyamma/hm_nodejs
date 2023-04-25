@@ -34,6 +34,7 @@
  +"if(arguments.length>=1){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
  +"evm(s+';');var r=gtv('###');";
  var hidemacJsGlobalFomulaString0="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
+ var hidemacJsGlobalFomulaJson0="var r;var a;var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';a=arguments[i];if(typeof(a)=='object'){a=JSON.stringify(a);}if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');r=gtv('$$$');";
  var hidemacJsGlobalFomulaString2rn="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==1){s+='###2';}else if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
  var hidemacJsGlobalFomulaString="var s='$$$='+m;"
  +"if(arguments.length>=1){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
@@ -53,6 +54,7 @@
  var fn3rn = hidemacJsGlobalFomulaNumber3rn;
  var fn = hidemacJsGlobalFomulaNumber;
  var fs0 = hidemacJsGlobalFomulaString0;
+ var fsj0 = hidemacJsGlobalFomulaJson0;
  var fs2rn = hidemacJsGlobalFomulaString2rn;
  var fs = hidemacJsGlobalFomulaString;
  var fsn = hidemacJsGlobalFomulaSorN;
@@ -159,6 +161,10 @@
  hg.screenleftx = function(){var m="screenleftx";eval(fn);return r;};if(f)screenleftx=hg.screenleftx;
  hg.compfilehandle = function(){var m="compfilehandle";eval(fn);return r;};if(f)compfilehandle=hg.compfilehandle;
  hg.scrolllinkhandle = function(){var m="scrolllinkhandle";eval(fn);return r;};if(f)scrolllinkhandle=hg.scrolllinkhandle;
+
+ hg.browserpanehandle = function(){var m="browserpanehandle";eval(fn);return r;};if(f)browserpanehandle=hg.browserpanehandle;
+ hg.browserpanesize = function(){var m="browserpanesize";eval(fn);return r;};if(f)browserpanesize=hg.browserpanesize;
+ hg.browserpaneurl = function(){var m="browserpaneurl";eval(fs);return r;};if(f)browserpaneurl=hg.browserpaneurl;
 
  hg.filename = function(){var m="filename";eval(fs);return r;};if(f)filename=hg.filename;
  hg.filename2 = function(){var m="filename2";eval(fs);return r;};if(f)filename2=hg.filename2;
@@ -594,6 +600,15 @@
  hg.settaborder = function(){var m="settaborder";eval(st);return r;};if(f)settaborder=hg.settaborder;
  hg.iconthistab = function(){var m="iconthistab";eval(st);return r;};if(f)iconthistab=hg.iconthistab;
  hg.fullscreen = function(){var m="fullscreen";eval(st);return r;};if(f)fullscreen=hg.fullscreen;
+
+ hg.setbrowserpanetarget = function(){var m="setbrowserpanetarget";eval(st);return r;};if(f)setbrowserpanetarget=hg.setbrowserpanetarget;
+ hg.setrenderpanetarget = function(){var m="setrenderpanetarget";eval(st);return r;};if(f)setrenderpanetarget=hg.setrenderpanetarget;
+ hg.showbrowserpane = function(){var m="showbrowserpane";eval(st);return r;};if(f)showbrowserpane=hg.showbrowserpane;
+ hg.refreshbrowserpane = function(){var m="refreshbrowserpane";eval(st);return r;};if(f)refreshbrowserpane=hg.refreshbrowserpane;
+ hg.setbrowserpanesize = function(){var m="setbrowserpanesize";eval(st);return r;};if(f)setbrowserpanesize=hg.setbrowserpanesize;
+ hg.setbrowserpaneurl = function(){var m="setbrowserpaneurl";eval(st);return r;};if(f)setbrowserpaneurl=hg.setbrowserpaneurl;
+ hg.browserpanecommand = function(){var m="browserpanecommand";eval(fsj0);return r;};if(f)browserpanecommand=hg.browserpanecommand;
+ hg.renderpanecommand = function(){var m="renderpanecommand";eval(fsj0);return r;};if(f)renderpanecommand=hg.renderpanecommand;
 
  hg.backtagjump = function(){var m="backtagjump";eval(st);return r;};if(f)backtagjump=hg.backtagjump;
  hg.directtagjump = function(){var m="directtagjump";eval(st);return r;};if(f)directtagjump=hg.directtagjump;
