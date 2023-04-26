@@ -89,6 +89,8 @@
  hg.lineupdated = function(){var m="lineupdated";eval(fn);return r;};if(f)lineupdated=hg.lineupdated;
  hg.xpixel = function(){var m="xpixel";eval(fn);return r;};if(f)xpixel=hg.xpixel;
  hg.ypixel = function(){var m="ypixel";eval(fn);return r;};if(f)ypixel=hg.ypixel;
+ hg.xpixel2 = function(){var m="xpixel2";eval(fn);return r;};if(f)xpixel2=hg.xpixel2;
+ hg.ypixel2 = function(){var m="ypixel2";eval(fn);return r;};if(f)ypixel2=hg.ypixel2;
  hg.prevposx = function(){var m="prevposx";eval(fn);return r;};if(f)prevposx=hg.prevposx;
  hg.prevposy = function(){var m="prevposy";eval(fn);return r;};if(f)prevposy=hg.prevposy;
  hg.lastupdatedx = function(){var m="lastupdatedx";eval(fn);return r;};if(f)lastupdatedx=hg.lastupdatedx;
