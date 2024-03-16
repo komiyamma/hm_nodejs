@@ -154,22 +154,22 @@ Struct hmEdgeJSDynamicLib+Hidemaru+Edit+HmMousePos: AutoLayout, AnsiClass, Class
     get_y(): PrivateScope, Public, HideBySig, SpecialName
     get_column(): PrivateScope, Public, HideBySig, SpecialName
     get_lineno(): PrivateScope, Public, HideBySig, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+File+IHidemaruEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+File+IHidemaruEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     Int32 HmEncode 'get ' : 
   Methods:
     get_HmEncode(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+File+IMicrosoftEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+File+IMicrosoftEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     Int32 MsCodePage 'get ' : 
   Methods:
     get_MsCodePage(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+File+IPythonEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+File+IPythonEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     System.String PyEncodingName 'get ' : 
   Methods:
     get_PyEncodingName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+File+IEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+File+IEncoding: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Interfaces:
     hmEdgeJSDynamicLib+Hidemaru+File+IHidemaruEncoding
     hmEdgeJSDynamicLib+Hidemaru+File+IMicrosoftEncoding
@@ -189,7 +189,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+File+Encoding: AutoLayout, AnsiClass, Class, N
     get_HmEncode(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
     get_MsCodePage(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
     get_PyEncodingName(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     Int32 Result 'get ' : 
     System.String Message 'get ' : 
@@ -198,7 +198,7 @@ Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IResult: AutoLayout, AnsiClass, Clas
     get_Result(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
     get_Message(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
     get_Error(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IStatementResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IStatementResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     Int32 Result 'get ' : 
     System.String Message 'get ' : 
@@ -209,7 +209,7 @@ Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IStatementResult: AutoLayout, AnsiCl
     get_Message(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
     get_Error(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
     get_Args(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
-Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IFunctionResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract
+Interface hmEdgeJSDynamicLib+Hidemaru+Macro+IFunctionResult: AutoLayout, AnsiClass, Class, NestedPublic, ClassSemanticsMask, Abstract, BeforeFieldInit
   Properties:
     System.Object Result 'get ' : 
     System.String Message 'get ' : 
