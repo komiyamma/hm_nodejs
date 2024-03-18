@@ -340,6 +340,7 @@
  hg.keypressedex = function(){var m="keypressedex";eval(fn);return r;};if(f)keypressedex=hg.keypressedex;
  hg.quote = function(){var m="quote";eval(fs);return r;};if(f)quote=hg.quote;
  hg.strreplace = function(){var m="strreplace";eval(fs);return r;};if(f)strreplace=hg.strreplace;
+ hg.getimecandidate = function(){var m="getimecandidate";eval(fs);return r;};if(f)getimecandidate=hg.getimecandidate;
 
  hg.newfile = function(){var m="newfile";eval(st);return r;};if(f)newfile=hg.newfile;
  hg.openfile = function(){var m="openfile";eval(st);return r;};if(f)openfile=hg.openfile;
@@ -384,6 +385,8 @@
  hg.shiftdown = function(){var m="shiftdown";eval(st);return r;};if(f)shiftdown=hg.shiftdown;
  hg.shiftright = function(){var m="shiftright";eval(st);return r;};if(f)shiftright=hg.shiftright;
  hg.shiftleft = function(){var m="shiftleft";eval(st);return r;};if(f)shiftleft=hg.shiftleft;
+ hg.shifthome = function(){var m="shifthome";eval(st);return r;};if(f)shifthome=hg.shifthome;
+ hg.shiftend = function(){var m="shiftend";eval(st);return r;};if(f)shiftend=hg.shiftend;
  hg.gofileend = function(){var m="gofileend";eval(st);return r;};if(f)gofileend=hg.gofileend;
  hg.gofiletop = function(){var m="gofiletop";eval(st);return r;};if(f)gofiletop=hg.gofiletop;
  hg.gokakko = function(){var m="gokakko";eval(st);return r;};if(f)gokakko=hg.gokakko;
