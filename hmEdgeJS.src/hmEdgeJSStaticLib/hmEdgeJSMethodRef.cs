@@ -13,6 +13,7 @@ public sealed partial class hmEdgeJSDynamicLib
 {
     static Func<object, Task<object>> refDebugInfo;
     static Func<object, Task<object>> refGetVersion;
+    static Func<object, Task<object>> refEditGetFileFullPath;
     static Func<object, Task<object>> refEditGetTotalText;
     static Func<object, Task<object>> refEditSetTotalText;
     static Func<object, Task<object>> refEditGetSelectedText;
@@ -66,6 +67,12 @@ public sealed partial class hmEdgeJSDynamicLib
         refGetVersion = (Func<object, Task<object>>)(async (obj) =>
         {
             var ret = Hidemaru.version;
+            return ret;
+        });
+
+        refEditGetFileFullPath = (Func<object, Task<object>>)(async (obj) =>
+        {
+            var ret = Hidemaru.Edit.GetFileFullPath();
             return ret;
         });
 
@@ -316,6 +323,12 @@ public sealed partial class hmEdgeJSDynamicLib
                     let format = require('util').format;
                     let joined = format(...args);
                     _TransRefObj.refDebugInfo(joined);
+                }
+
+                function _hm_refEditGetFileFullPath(obj) {
+                    let text = """";
+                    let dumm = _TransRefObj.refEditGetFileFullPath(obj, function(error, result) { text = result; } );
+                    return text;
                 }
 
                 function _hm_refEditGetTotalText(obj) {
@@ -570,6 +583,10 @@ public sealed partial class hmEdgeJSDynamicLib
                }
 
                 class _hm_edit_ {
+                    static get FileName() {
+                        return _hm_refEditGetFileFullPath();
+                    }
+
                     static get TotalText() {
                         return _hm_refEditGetTotalText();
                     }
@@ -831,6 +848,7 @@ public sealed partial class hmEdgeJSDynamicLib
                 filename = filename,
                 refDebugInfo = refDebugInfo,
                 refGetVersion = refGetVersion,
+                refEditGetFileFullPath = refEditGetFileFullPath,
                 refEditGetTotalText = refEditGetTotalText,
                 refEditSetTotalText = refEditSetTotalText,
                 refEditGetSelectedText = refEditGetSelectedText,

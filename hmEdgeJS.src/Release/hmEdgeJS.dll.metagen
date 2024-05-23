@@ -74,6 +74,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+Edit: AutoLayout, AnsiClass, Class, NestedPubl
   Methods:
     GetCursorPos(): PrivateScope, Public, Static, HideBySig
     GetCursorPosFromMousePos(): PrivateScope, Public, Static, HideBySig
+    GetFileFullPath(): PrivateScope, Public, Static, HideBySig
     GetTotalText(): PrivateScope, Public, Static, HideBySig
     SetTotalText(String): PrivateScope, Public, Static, HideBySig
     GetSelectedText(): PrivateScope, Public, Static, HideBySig

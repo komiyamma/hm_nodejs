@@ -8,6 +8,10 @@
  hidemaru.getSelectedText = function() { var selected = hm.Edit.SelectedText; if (selected == "") { return undefined; } else { return selected; } };
  hidemaru.loadTextFile = function (p) { try { var sr = hm.File.Open(p); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
  hidemaru.saveTextFile = function (p, t, e) { return hm.File._SaveTextFile(p, t, e); };
+ hidemaru.getFileFullPath = function() { return hm.Edit.FileName; };
+
+ hidemaru.getUpdateCount = function() { return updatecount(); };
+ hidemaru.getInputStates = function() { return inputstates(); };
 
  hidemaru.getVar = function (s) { return hm.Macro.Var(s); };
  hidemaru.setVar = function (s, v) { return hm.Macro.Var(s, v); };
@@ -169,7 +173,7 @@
  hg.browserpaneurl = function(){var m="browserpaneurl";eval(fs);return r;};if(f)browserpaneurl=hg.browserpaneurl;
 
  hg.filename = function(){var m="filename";eval(fs);return r;};if(f)filename=hg.filename;
- hg.filename2 = function(){var m="filename2";eval(fs);return r;};if(f)filename2=hg.filename2;
+ hg.filename2 = function(){ return hm.Edit.FileName;};if(f)filename2=hg.filename2;
  hg.filename3 = function(){var m="filename3";eval(fs);return r;};if(f)filename3=hg.filename3;
  hg.basename = function(){var m="basename";eval(fs);return r;};if(f)basename=hg.basename;
  hg.basename2 = function(){var m="basename2";eval(fs);return r;};if(f)basename2=hg.basename2;
