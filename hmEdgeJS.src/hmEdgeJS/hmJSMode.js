@@ -4,6 +4,7 @@
  hidemaru.getCurrentWindowHandle = function() { return hm.WindowHandle; };
 
  hidemaru.getTotalText = function() { return hm.Edit.TotalText; };
+ hidemaru.setTotalText = function(s) { hm.Edit.TotalText = s; return hm.Macro.Var("result"); };
  hidemaru.getLineText = function(l) { if (l==null) { l = hm.Edit.CursorPos.lineno; } var line = l-1; var text = hm.Edit.TotalText; var lines = text.match(/[^\r\n]*(\r\n|\r|\n|$)/g); if (0 <= line && line < lines.length) { return lines[line]; } else { return undefined; } };
  hidemaru.getSelectedText = function() { var selected = hm.Edit.SelectedText; if (selected == "") { return undefined; } else { return selected; } };
  hidemaru.loadTextFile = function (p) { try { var sr = hm.File.Open(p); var text = sr.Read(); sr.Close(); return text; } catch(e) { } return undefined; };
@@ -794,7 +795,8 @@
  hg.seteventnotify = function(){var m="seteventnotify";eval(st);return r;};if(f)seteventnotify=hg.seteventnotify;
  hg.geteventnotify = function(){var m="geteventnotify";eval(fn);return r;};if(f)geteventnotify=hg.geteventnotify;
 
- hg.gettotaltext = function(){ var m="gettotaltext";eval(fs0);return r;};if(f)gettotaltext=hg.gettotaltext;
+ hg.gettotaltext = hidemaru.getTotalText;if(f)gettotaltext=hg.gettotaltext;
+ hg.settotaltext = hidemaru.setTotalText;if(f)settotaltext=hg.settotaltext;
  hg.getlinetext = function(){ var m="getlinetext";eval(fs0);return r;};if(f)getlinetext=hg.getlinetext;
  hg.getselectedtext = function(){ var m="getselectedtext";eval(fs0);return r;};if(f)getselectedtext=hg.getselectedtext;
 
