@@ -85,7 +85,7 @@ public sealed partial class hmEdgeJSDynamicLib
                 }
                 catch (Exception e)
                 {
-                    System.Diagnostics.Trace.WriteLine(e);
+                    OutputDebugStream(e);
                 }
 
                 return "";
