@@ -702,7 +702,7 @@
  hg.sleep = function(){var m="sleep";eval(st);return r;};if(f)sleep=hg.sleep;
  hg.setcompatiblemode = function(){var m="setcompatiblemode";eval(fn);return r;};if(f)setcompatiblemode=hg.setcompatiblemode;
  hg.setfloatmode = function(){var m="setfloatmode";eval(st);return r;};if(f)setfloatmode=hg.setfloatmode;
- hg.seterrormode = function(){var m="seterrormode";eval(st);return r;};if(f)seterrormode=hg.seterrormode;
+ hg.seterrormode = function(){var m="seterrormode";eval(fn);return r;};if(f)seterrormode=hg.seterrormode;
  hg.setbackgroundmode = function(){var m="setbackgroundmode";eval(st);return r;};if(f)setbackgroundmode=hg.setbackgroundmode;
 
  hg.inputpos = function(){var m="inputpos";eval(st);return r;};if(f)inputpos=hg.inputpos;
