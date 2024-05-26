@@ -45,6 +45,9 @@ public sealed partial class hmEdgeJSDynamicLib
         delegate int TEvalMacro([MarshalAs(UnmanagedType.LPWStr)] String pwsz);
 
         [UnmanagedFunctionPointer(CallingConvention.Winapi)]
+        delegate int TDebugInfo([MarshalAs(UnmanagedType.LPWStr)] String pwsz);
+
+        [UnmanagedFunctionPointer(CallingConvention.Winapi)]
         delegate int TCheckQueueStatus();
 
         [UnmanagedFunctionPointer(CallingConvention.Winapi)]
@@ -67,6 +70,7 @@ public sealed partial class hmEdgeJSDynamicLib
         static TGetCursorPosUnicodeFromMousePos pGetCursorPosUnicodeFromMousePos;
         static TGetCursorPosUnicode pGetCursorPosUnicode;
         static TEvalMacro pEvalMacro;
+        static TDebugInfo pDebugInfo;
         static TCheckQueueStatus pCheckQueueStatus;
         static TAnalyzeEncoding pAnalyzeEncoding;
         static TLoadFileUnicode pLoadFileUnicode;
@@ -178,6 +182,11 @@ public sealed partial class hmEdgeJSDynamicLib
                         {
                             pAnalyzeEncoding = hmExeHandle.GetProcDelegate<TAnalyzeEncoding>("Hidemaru_AnalyzeEncoding");
                             pLoadFileUnicode = hmExeHandle.GetProcDelegate<TLoadFileUnicode>("Hidemaru_LoadFileUnicode");
+                        }
+
+                        if (_ver >= 898)
+                        {
+                            pDebugInfo = hmExeHandle.GetProcDelegate<TDebugInfo>("Hidemaru_DebugInfo");
                         }
 
                         if (_ver >= 915)
