@@ -63,6 +63,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+ErrorMsg: AutoLayout, AnsiClass, Class, Nested
     System.String MethodNeed875 = このメソッドは秀丸エディタ v8.75 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
     System.String MethodNeed877 = このメソッドは秀丸エディタ v8.77 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
     System.String MethodNeed890 = このメソッドは秀丸エディタ v8.90 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
+    System.String MethodNeed898 = このメソッドは秀丸エディタ v8.98 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
     System.String MethodNeed912 = このメソッドは秀丸エディタ v9.12 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
     System.String MethodNeed915 = このメソッドは秀丸エディタ v9.15 正式版以降で利用可能です。 : Public, Static, Literal, HasDefault
     System.String MethodNeedOutputNotFound = HmOutputPaneの対象関数を発見できません。 : Public, Static, Literal, HasDefault
@@ -111,6 +112,7 @@ Class hmEdgeJSDynamicLib+Hidemaru+Macro: AutoLayout, AnsiClass, Class, NestedPub
   Properties:
     Boolean IsExecuting 'get ' : 
   Methods:
+    DebugInfo(Object[]): PrivateScope, Public, Static, HideBySig
     _SendMessage(Int32, UInt32, Int32, Int32): PrivateScope, Public, Static, HideBySig
     Eval(Object): PrivateScope, Public, Static, HideBySig
     SetStaticVariable(String, String, Int32): PrivateScope, Public, Static, HideBySig
