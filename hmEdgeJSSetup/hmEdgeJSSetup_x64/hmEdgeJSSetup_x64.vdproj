@@ -191,7 +191,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.5.1, Culture=neutral, processorArchitecture=AMD64"
+            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.5.2, Culture=neutral, processorArchitecture=AMD64"
                 "ScatterAssemblies"
                 {
                     "_0AD7942C246445FBBB5B8A6AD261D226"
@@ -376,8 +376,8 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:hmEdgeJS x64 版"
-        "ProductCode" = "8:{84862DDB-C9DD-4363-9B91-33F4F514F02A}"
-        "PackageCode" = "8:{C4C3C721-AC0D-459E-BABF-4BBB803A4451}"
+        "ProductCode" = "8:{4435D4F0-92DD-4748-B28E-7CC8FF9C64DA}"
+        "PackageCode" = "8:{5D773599-BA23-4670-AC43-EBF23BC31682}"
         "UpgradeCode" = "8:{F2C86FB9-3FF7-44DE-9DE2-8B12595EE05C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
