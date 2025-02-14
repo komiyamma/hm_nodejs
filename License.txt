@@ -1,5 +1,5 @@
 - hmEdgeJS
-   Copyright (C) 2018-2024 Akitsugu Komiyama
+   Copyright (C) 2018-2025 Akitsugu Komiyama
 
 
                                  Apache License

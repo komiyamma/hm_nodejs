@@ -39,6 +39,9 @@
  var hidemacJsGlobalFomulaNumber="var s='###='+m;"
  +"if(arguments.length>=1){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
  +"evm(s+';');var r=gtv('###');";
+ var hidemacJsGlobalFomulaNumberFuncOnly="var s='###='+m;"
+ +"if(arguments.length>=0){s+='(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';}"    
+ +"evm(s+';');var r=gtv('###');";
  var hidemacJsGlobalFomulaString0="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
  var hidemacJsGlobalFomulaJson0="var r;var a;var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';a=arguments[i];if(typeof(a)=='object'){a=JSON.stringify(a);}if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');r=gtv('$$$');";
  var hidemacJsGlobalFomulaString2rn="var s='$$$='+m+'(';for(var i=0;i<arguments.length;i++){if(i>0)s+=',';var a=arguments[i];if(i==1){s+='###2';}else if(typeof(a)=='string'){s+='R\"\xFF('+a+')\xFF\"';}else{s+=a;}}s+=')';evm(s+';');var r=gtv('$$$');";
@@ -59,6 +62,7 @@
  var fn1s2s = hidemacJsGlobalFomulaNumber1s2s;
  var fn3rn = hidemacJsGlobalFomulaNumber3rn;
  var fn = hidemacJsGlobalFomulaNumber;
+ var fnfo = hidemacJsGlobalFomulaNumberFuncOnly;
  var fs0 = hidemacJsGlobalFomulaString0;
  var fs1j = hidemacJsGlobalFomulaJson0;
  var fs2rn = hidemacJsGlobalFomulaString2rn;
@@ -347,6 +351,7 @@
  hg.quote = function(){var m="quote";eval(fs);return r;};if(f)quote=hg.quote;
  hg.strreplace = function(){var m="strreplace";eval(fs);return r;};if(f)strreplace=hg.strreplace;
  hg.getimecandidate = function(){var m="getimecandidate";eval(fs);return r;};if(f)getimecandidate=hg.getimecandidate;
+ hg.getdpi = function(){var m="getdpi";eval(fnfo);return r;};if(f)getdpi=hg.getdpi;
 
  hg.newfile = function(){var m="newfile";eval(st);return r;};if(f)newfile=hg.newfile;
  hg.openfile = function(){var m="openfile";eval(st);return r;};if(f)openfile=hg.openfile;
