@@ -191,7 +191,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.5.2, Culture=neutral, processorArchitecture=AMD64"
+            "AssemblyAsmDisplayName" = "8:hmEdgeJS, Version=2.0.6.1, Culture=neutral, processorArchitecture=AMD64"
                 "ScatterAssemblies"
                 {
                     "_0AD7942C246445FBBB5B8A6AD261D226"
@@ -376,15 +376,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:hmEdgeJS x64 版"
-        "ProductCode" = "8:{4435D4F0-92DD-4748-B28E-7CC8FF9C64DA}"
-        "PackageCode" = "8:{5D773599-BA23-4670-AC43-EBF23BC31682}"
+        "ProductCode" = "8:{94C6499C-D1BB-4B6E-8C6F-298187573300}"
+        "PackageCode" = "8:{B692B9A6-46C3-49BA-A97C-B25B9D1790BC}"
         "UpgradeCode" = "8:{F2C86FB9-3FF7-44DE-9DE2-8B12595EE05C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:2.0.5"
+        "ProductVersion" = "8:2.0.6"
         "Manufacturer" = "8:Akitsugu Komiyama"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
